@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Megha Verma · Executive Product & Automation Leader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-pIVpG8YxTQ9b+QqvYh0Tz+L5a8uV4aYJbYFWq7ISnvyVvNQwPOONv8h3qK3T8YaLB/G1bGhj1B2wZ0kzS3u7WQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #090d1f;
+      --card: #111827;
+      --card-alt: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --accent-strong: #facc15;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --transition-fast: 0.18s ease-out;
+      --transition-med: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 40%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 20px 72px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 20% 20%, #facc15, #0ea5e9 40%, #0f172a 80%);
+      border: 2px solid rgba(148, 163, 184, 0.55);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-avatar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(248, 250, 252, 0.2), transparent 55%);
+      mix-blend-mode: screen;
+    }
+
+    .brand-text h1 {
+      font-size: 1.02rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      font-size: 0.8rem;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--muted);
+      transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+    }
+
+    nav a:hover {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+    }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 55%),
+        radial-gradient(circle at top right, rgba(250, 204, 21, 0.07), transparent 55%),
+        linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.98));
+      border-radius: 26px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 26px 22px 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.4fr);
+      gap: 20px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0.24;
+      background-image: radial-gradient(circle at 0 0, #1d4ed8 0.5px, transparent 0.5px);
+      background-size: 42px 42px;
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+    }
+
+    .hero-main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 3px 10px 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 8px;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-kicker i {
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.7rem, 3vw, 1.9rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #e5e7eb, #38bdf8, #facc15);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.92rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin-bottom: 10px;
+    }
+
+    .hero-typing {
+      font-size: 0.84rem;
+      color: var(--accent-strong);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .hero-typing span.label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .hero-typing span.cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1rem;
+      background: var(--accent-strong);
+      margin-left: 2px;
+      animation: blink 0.9s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      padding: 9px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      background: none;
+      color: var(--text);
+      transition: background var(--transition-med), transform var(--transition-med), border-color var(--transition-med), box-shadow var(--transition-med), color var(--transition-med);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: #020617;
+      box-shadow: 0 14px 30px rgba(8, 47, 73, 0.75);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(8, 47, 73, 0.9);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-pill {
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-pill i {
+      color: var(--accent);
+    }
+
+    /* HERO RIGHT - REDESIGNED STRATEGIC IMPACT */
+    .hero-right {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-impact-card {
+      height: 100%;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: inset 0 0 40px rgba(56, 189, 248, 0.05);
+    }
+
+    .impact-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .impact-header h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .impact-item {
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 12px;
+      padding: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .impact-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .impact-value {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .impact-label {
+      font-size: 0.68rem;
+      color: var(--muted);
+      line-height: 1.3;
+      display: block;
+    }
+
+    .impact-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.3), transparent);
+        margin: 4px 0;
+    }
+
+    .impact-skills-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .impact-skill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+    }
+
+    .impact-skill i {
+        color: var(--accent-strong);
+        font-size: 0.7rem;
+    }
+
+    .impact-skill span {
+        font-weight: 500;
+        color: var(--text);
+    }
+
+    .impact-footer {
+        margin-top: auto;
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-style: italic;
+        border-top: 1px solid rgba(148, 163, 184, 0.2);
+        padding-top: 12px;
+    }
+
+    /* SECTION SHELLS */
+    section {
+      margin-top: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title span.label {
+      color: var(--text);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent));
+      opacity: 0.8;
+    }
+
+    .section-description {
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: 420px;
+      text-align: right;
+    }
+
+    /* BEAUTIFIED TIMELINE LEGEND */
+    .timeline {
+      background: linear-gradient(135deg, #020617, #020617);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 2.4fr);
+      gap: 32px;
+      box-shadow: inset 0 0 40px rgba(56, 189, 248, 0.03);
+    }
+
+    .timeline-legend {
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .legend-header h4 {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--accent-strong);
+        margin-bottom: 8px;
+    }
+
+    .legend-header strong {
+      font-size: 1.15rem;
+      color: var(--text);
+      display: block;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .legend-text {
+        font-size: 0.85rem;
+        color: var(--muted);
+        line-height: 1.6;
+    }
+
+    .timeline-path {
+      margin-top: 8px;
+      position: relative;
+      padding-left: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .timeline-path::before {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: linear-gradient(to bottom, var(--accent), var(--accent-strong));
+        opacity: 0.3;
+    }
+
+    .path-node {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .path-node::after {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 6px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+    }
+
+    .path-node.gold::after {
+        background: var(--accent-strong);
+        box-shadow: 0 0 10px var(--accent-strong);
+    }
+
+    .path-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text);
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .path-desc {
+        font-size: 0.75rem;
+        color: var(--muted);
+        line-height: 1.4;
+    }
+
+    .timeline-list {
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .timeline-list::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(148, 163, 184, 0), rgba(148, 163, 184, 0.7), rgba(148, 163, 184, 0));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -1px;
+      top: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 2px solid rgba(15, 23, 42, 1);
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.18);
+    }
+
+    .timeline-card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 10px 11px;
+      cursor: pointer;
+      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med), background var(--transition-med);
+    }
+
+    .timeline-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-role {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .timeline-meta {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .timeline-company {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .timeline-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 5px;
+      font-size: 0.7rem;
+    }
+
+    .timeline-pill {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--muted);
+    }
+
+    .timeline-details {
+      margin-top: 6px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease, opacity 0.32s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), rgba(15, 23, 42, 0.98));
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .timeline-card.expanded .timeline-details {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    /* PROJECT VAULT */
+    .vault-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .vault-card {
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.09), rgba(15, 23, 42, 0.98));
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 10px 10px 9px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med), background var(--transition-med);
+    }
+
+    .vault-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 38px rgba(15, 23, 42, 0.95);
+      border-color: var(--accent);
+      background: radial-gradient(circle at top, rgba(250, 204, 21, 0.18), rgba(15, 23, 42, 0.98));
+    }
+
+    .vault-tag {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .vault-title {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .vault-meta {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .vault-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    .vault-badge {
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .vault-arrow {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      transition: transform var(--transition-med);
+    }
+
+    .vault-card:hover .vault-arrow {
+      transform: translateX(3px);
+    }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 40;
+    }
+
+    .modal {
+      max-width: 640px;
+      width: 100%;
+      background: #020617;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.95);
+      padding: 18px 18px 16px;
+      position: relative;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .modal-chip {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+    }
+
+    .modal-close {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: transparent;
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.74rem;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .modal-close:hover {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .modal-block {
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 9px 9px 8px;
+      font-size: 0.75rem;
+    }
+
+    .modal-block h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+      color: var(--muted);
+    }
+
+    .modal-meta {
+      margin-top: 9px;
+      font-size: 0.74rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .modal-meta span {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 16px;
+    }
+
+    .skills-bars {
+      background: linear-gradient(135deg, #020617, #020617);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 10px;
+    }
+
+    .skill-row {
+      margin-bottom: 12px;
+    }
+
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      margin-bottom: 3px;
+    }
+
+    .skill-label span.level {
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .skill-bar {
+      position: relative;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 1);
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      position: absolute;
+      inset: 0;
+      width: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #0ea5e9, #22c55e, #facc15);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9);
+      transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .skills-cloud {
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), rgba(15, 23, 42, 1));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 10px 11px 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-content: flex-start;
+    }
+
+    .cloud-chip {
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 0.72rem;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+      transform: translateY(0);
+      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med), background var(--transition-med);
+    }
+
+    .cloud-chip:nth-child(odd) {
+      background: rgba(8, 47, 73, 0.9);
+      border-color: rgba(56, 189, 248, 0.6);
+      color: #e0f2fe;
+    }
+
+    .cloud-chip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
+      border-color: var(--accent);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    /* BEAUTIFIED TESTIMONIALS - ENHANCED */
+    .testimonials {
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), rgba(15, 23, 42, 0.98));
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.3fr);
+      gap: 24px;
+      align-items: stretch;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-main {
+      position: relative;
+      z-index: 1;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 340px;
+    }
+
+    .testimonial-top {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-quote-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #facc15, #0ea5e9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #020617;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.5);
+    }
+
+    .testimonial-quote {
+      font-size: 0.94rem;
+      color: var(--text);
+      line-height: 1.7;
+      font-style: italic;
+      position: relative;
+    }
+
+    .testimonial-quote span.highlight {
+      background: linear-gradient(120deg, #facc15, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 600;
+    }
+
+    .testimonial-footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.2);
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .testimonial-author-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(148, 163, 184, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+
+    .testimonial-author-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-author {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .testimonial-author-role {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* FIXED LINKEDIN BUTTON */
+    .testimonial-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 160px; /* Fixed width to prevent resizing */
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--muted);
+      font-size: 0.75rem;
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .testimonial-links a i {
+      color: #0077b5; /* LinkedIn Brand Color */
+      font-size: 0.9rem;
+    }
+
+    .testimonial-links a:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-2px);
+    }
+
+    .testimonial-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    .testimonial-dot-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .testimonial-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(148, 163, 184, 0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .testimonial-dot.active {
+      width: 24px;
+      border-radius: 4px;
+      background: var(--accent);
+    }
+
+    .testimonial-controls {
+      display: flex;
+      gap: 12px;
+    }
+
+    .testimonial-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .testimonial-btn:hover {
+      background: var(--accent);
+      color: #020617;
+      border-color: var(--accent);
+    }
+
+    .testimonial-side {
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .testimonial-side-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .testimonial-side-highlight {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .testimonial-side-list {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .testimonial-side-list ul {
+      list-style: none;
+    }
+
+    .testimonial-side-list li {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .testimonial-side-list li i {
+        color: var(--accent-strong);
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 32px;
+      border-top: 1px solid rgba(30, 64, 175, 0.7);
+      padding-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.95);
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+    }
+
+    .footer-links a i {
+      color: var(--accent);
+    }
+
+    .footer-links a:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      color: var(--text);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .vault-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-description {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 14px 56px;
+      }
+
+      .vault-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 20px 16px 18px;
+      }
+
+      .timeline {
+        padding: 12px;
+      }
+
+      .skills-bars,
+      .skills-cloud {
+        padding: 11px 10px;
+      }
+
+      .modal {
+        padding: 16px 14px 14px;
+      }
+
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-footer {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+      
+      .testimonial-links a {
+          width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-avatar"></div>
+        <div class="brand-text">
+          <h1>Megha Verma</h1>
+          <span>Strategic Product & Automation Leader</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#hero">Hero</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#projects">Project Vault</a>
+        <a href="#skills">Skills</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="hero-main">
+        <div class="hero-kicker">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>EXECUTIVE PORTFOLIO · DIGITAL TRANSFORMATION</span>
+        </div>
+        <h2 class="hero-title">
+          <span>Building AI-driven ecosystems that pay for themselves.</span>
+        </h2>
+        <p class="hero-subtitle">
+          Senior Product Executive with 18 years orchestrating high-ROI digital platforms across telecommunications and global financial services, delivering margin uplift, call deflection, and intelligent automation at scale.
+        </p>
+
+        <div class="hero-typing">
+          <span class="label">EXECUTIVE ROLES</span>
+          <span id="typing-text"></span><span class="cursor"></span>
+        </div>
+
+        <div class="hero-actions">
+          <button id="download-resume" class="btn btn-primary">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+            Download Resume
+          </button>
+          <button class="btn btn-ghost" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-vial-circle-check"></i>
+            View Project Vault
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-pill">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>105M margin goal · 25.1M annual savings delivered</span>
+          </div>
+          <div class="hero-pill">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span>17+ automation use cases · 10.5M annual interactions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-impact-card">
+          <div class="impact-header">
+            <h3>Strategic Leadership</h3>
+            <i class="fa-solid fa-chart-pie" style="color:var(--accent)"></i>
+          </div>
+
+          <div class="impact-grid">
+            <div class="impact-item">
+              <span class="impact-value">$25.1M</span>
+              <span class="impact-label">Annual Savings<br>Delivered</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-value">133K</span>
+              <span class="impact-label">Productivity Hrs<br>Returned</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-value">91K</span>
+              <span class="impact-label">Monthly Calls<br>Deflected</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-value">18Yrs</span>
+              <span class="impact-label">Tech & Ops<br>Leadership</span>
+            </div>
+          </div>
+
+          <div class="impact-divider"></div>
+
+          <div class="impact-skills-list">
+            <div class="impact-skill">
+              <i class="fa-solid fa-bolt"></i>
+              <span>High-Velocity Roadmap Execution</span>
+            </div>
+            <div class="impact-skill">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Enterprise AI Portfolio Oversight</span>
+            </div>
+            <div class="impact-skill">
+              <i class="fa-solid fa-users-gear"></i>
+              <span>Global Team Mentorship & Scale</span>
+            </div>
+            <div class="impact-skill">
+              <i class="fa-solid fa-handshake"></i>
+              <span>C-Suite Stakeholder Partnership</span>
+            </div>
+          </div>
+
+          <div class="impact-footer">
+            "Turning technical debt into digital equity through intelligent automation."
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="label">Career Timeline</span>
+        </div>
+        <p class="section-description">
+          From Java developer in global banking to senior product leader at a Fortune 15 telecom, scaling AI-led portfolios and automation programs worldwide.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-legend">
+          <div class="legend-header">
+            <h4>Executive Evolution</h4>
+            <strong>Two eras, one throughline.</strong>
+          </div>
+          <div class="legend-text">
+            Technology consulting laid the engineering foundation; enterprise product leadership unlocked AI-powered ecosystems for millions.
+          </div>
+          <div class="timeline-path">
+            <div class="path-node">
+                <span class="path-label">Digital Transformation Era</span>
+                <span class="path-desc">Strategic product & AI automation leadership at Verizon Consumer Group.</span>
+            </div>
+            <div class="path-node gold">
+                <span class="path-label">Engineering Foundation</span>
+                <span class="path-desc">13 years delivering high-availability systems for Goldman Sachs, Fidelity, and Deutsche Bank.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" data-expandable="true">
+              <div class="timeline-card-header">
+                <div>
+                  <div class="timeline-role">Senior Product Manager Lead — Enterprise AI Automation</div>
+                  <div class="timeline-company">Verizon Consumer Group · Hyderabad, India · Jul 2021 – Present</div>
+                </div>
+                <div class="timeline-meta">Head of Product · 105M+ portfolio</div>
+              </div>
+              <div class="timeline-pill-row">
+                <span class="timeline-pill">Service Done Right platform</span>
+                <span class="timeline-pill">Journey as a Service (JaaS)</span>
+                <span class="timeline-pill">25.1M annual savings</span>
+              </div>
+              <div class="timeline-details">
+                Architected AI-driven follow-up and journey orchestration platforms, automating 30+ service categories, reducing secondary support calls by 15, and scaling to over 514k digital interactions and 91k assisted interactions per quarter.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" data-expandable="true">
+              <div class="timeline-card-header">
+                <div>
+                  <div class="timeline-role">Senior Technology Analyst & Strategic Liaison</div>
+                  <div class="timeline-company">Infosys · New York, NY & Bangalore, India · Jan 2008 – Jul 2021</div>
+                </div>
+                <div class="timeline-meta">Global banking & automation</div>
+              </div>
+              <div class="timeline-pill-row">
+                <span class="timeline-pill">Tech Lead Liaison — Goldman Sachs NYC</span>
+                <span class="timeline-pill">RPA automation for 76,500+ transactions</span>
+                <span class="timeline-pill">Agile transformation of legacy systems</span>
+              </div>
+              <div class="timeline-details">
+                Progressed from Java developer to senior consultant, leading modernization, RPA, and strategic delivery for Goldman Sachs, Fidelity Investments, and Deutsche Bank, automating 80% of manual reconciliation effort across 76,500 annual records.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" data-expandable="true">
+              <div class="timeline-card-header">
+                <div>
+                  <div class="timeline-role">Technical & Automation Specialist — Global Portfolios</div>
+                  <div class="timeline-company">Financial Services & Telecom · 2007 – 2021</div>
+                </div>
+                <div class="timeline-meta">Full-stack, RPA, and data</div>
+              </div>
+              <div class="timeline-pill-row">
+                <span class="timeline-pill">Java & microservices foundation</span>
+                <span class="timeline-pill">Lean Six Sigma Green Belt</span>
+                <span class="timeline-pill">AI & hyperautomation shift</span>
+              </div>
+              <div class="timeline-details">
+                Built deep engineering roots in Java, microservices, and enterprise data, later expanded into RPA, AI, and Lean Six Sigma to design automation portfolios that balance resilience, compliance, and user-centric experiences.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="label">Project Vault</span>
+        </div>
+        <p class="section-description">
+          Signature case studies framed around challenge, action, and measurable outcomes across automation, journey orchestration, and proactive service integrity.
+        </p>
+      </div>
+
+      <div class="vault-grid">
+        <div class="vault-card" data-project="order-remediation">
+          <div class="vault-tag">Automation · RPA</div>
+          <div class="vault-title">End-to-End Automated Order Remediation & Provisioning</div>
+          <div class="vault-meta">Business Architect & Product Owner · Telecom operations</div>
+          <div class="vault-badge-row">
+            <span class="vault-badge">Reduced manual data entry</span>
+            <span class="vault-badge">Improved order-to-activation cycle</span>
+          </div>
+          <span class="vault-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="vault-card" data-project="attended-rpa">
+          <div class="vault-tag">CX · Attended RPA</div>
+          <div class="vault-title">Real-Time Interactive Service Validation (Attended RPA)</div>
+          <div class="vault-meta">Senior Product Owner · Customer experience & compliance</div>
+          <div class="vault-badge-row">
+            <span class="vault-badge">Automated eligibility checks</span>
+            <span class="vault-badge">Digital review links</span>
+          </div>
+          <span class="vault-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="vault-card" data-project="esim-optimization">
+          <div class="vault-tag">Lean Six Sigma</div>
+          <div class="vault-title">eSIM Digital Activation Optimization</div>
+          <div class="vault-meta">Senior Product Owner · DMAIC-led AHT reduction</div>
+          <div class="vault-badge-row">
+            <span class="vault-badge">50% AHT reduction target</span>
+            <span class="vault-badge">Standardized activation paths</span>
+          </div>
+          <span class="vault-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="vault-card" data-project="logistics-rpa">
+          <div class="vault-tag">Supply Chain · RPA</div>
+          <div class="vault-title">Automated Logistics Reconciliation & Customer Communication</div>
+          <div class="vault-meta">Product Manager · ERP & SAP integration</div>
+          <div class="vault-badge-row">
+            <span class="vault-badge">28,188 annual cost savings</span>
+            <span class="vault-badge">76,500 transactions automated</span>
+          </div>
+          <span class="vault-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="vault-card" data-project="jaas">
+          <div class="vault-tag">Journey Orchestration</div>
+          <div class="vault-title">Journey as a Service (JaaS) Platform</div>
+          <div class="vault-meta">Senior Product Owner · Multi-channel experience</div>
+          <div class="vault-badge-row">
+            <span class="vault-badge">514k digital interactions/Q2 2025</span>
+            <span class="vault-badge">91k assisted interactions</span>
+          </div>
+          <span class="vault-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="vault-card" data-project="service-integrity">
+          <div class="vault-tag">Proactive Service</div>
+          <div class="vault-title">Enterprise Service Integrity — Intelligent Follow-Up</div>
+          <div class="vault-meta">Senior Product Manager Lead · Service Done Right</div>
+          <div class="vault-badge-row">
+            <span class="vault-badge">30 follow-up categories</span>
+            <span class="vault-badge">Global master reference</span>
+          </div>
+          <span class="vault-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="label">Skills Graph</span>
+        </div>
+        <p class="section-description">
+          An intersection of executive-level product strategy, multi-layer automation architecture, and deep technical engineering roots.
+        </p>
+      </div>
+
+      <div class="skills">
+        <div class="skills-bars">
+          <div class="skill-row">
+            <div class="skill-label">
+              <span>Strategic Product Leadership & Roadmap</span>
+              <span class="level">Executive</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill-width="98"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">
+              <span>Technology & AI Portfolio Management</span>
+              <span class="level">Lead</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill-width="95"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">
+              <span>Customer Journey & CX Orchestration</span>
+              <span class="level">Expert</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill-width="92"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">
+              <span>Business ROI & Financial Modeling</span>
+              <span class="level">Advanced</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill-width="89"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">
+              <span>Scaled Agile & Lean Operations (SAFe)</span>
+              <span class="level">Expert</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill-width="94"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-cloud">
+          <span class="cloud-chip">Market Analysis & Opportunity Assessment</span>
+          <span class="cloud-chip">Strategic Resource Planning</span>
+          <span class="cloud-chip">Discovery & Visioning</span>
+          <span class="cloud-chip">GTM Strategy</span>
+          <span class="cloud-chip">Stakeholder Management</span>
+          
+          <span class="cloud-chip">Java Spring Boot & Microservices</span>
+          <span class="cloud-chip">Automation Anywhere & UiPath</span>
+          <span class="cloud-chip">Pega Customer Decision Hub</span>
+          <span class="cloud-chip">SQL / Oracle / MongoDB</span>
+          <span class="cloud-chip">RPA Portfolio Architecture</span>
+          <span class="cloud-chip">Generative AI Exploration (LLMs)</span>
+          <span class="cloud-chip">Hyper-automation Strategy</span>
+          
+          <span class="cloud-chip">Lean Six Sigma Green Belt</span>
+          <span class="cloud-chip">Jira / Confluence / Tableau</span>
+          <span class="cloud-chip">DMAIC Framework</span>
+          <span class="cloud-chip">Design Thinking</span>
+          <span class="cloud-chip">A/B Testing & KPI Analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="label">Endorsements</span>
+        </div>
+        <p class="section-description">
+          Insights from global technology leaders on strategic partnership and execution.
+        </p>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial-main">
+          <div class="testimonial-top">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="testimonial-quote" id="testimonial-quote"></div>
+          </div>
+          
+          <div class="testimonial-footer">
+            <div class="testimonial-author-group">
+                <div class="testimonial-avatar" id="testimonial-avatar"></div>
+                <div class="testimonial-author-meta">
+                  <div class="testimonial-author" id="testimonial-author"></div>
+                  <div class="testimonial-author-role" id="testimonial-role"></div>
+                </div>
+            </div>
+            <div class="testimonial-links">
+              <a id="testimonial-link" href="#" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>View on LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="testimonial-navigation">
+            <div class="testimonial-dot-row" id="testimonial-dots"></div>
+            <div class="testimonial-controls">
+              <button class="testimonial-btn" id="testimonial-prev">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="testimonial-btn" id="testimonial-next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="testimonial-side">
+          <div class="testimonial-side-label">Leadership DNA</div>
+          <div class="testimonial-side-highlight">
+            Bridging technical complexity with business clarity.
+          </div>
+          <div class="testimonial-side-list">
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Composure in high-stakes environments.</li>
+              <li><i class="fa-solid fa-check"></i> Distributed team leadership (US & India).</li>
+              <li><i class="fa-solid fa-check"></i> Jargon-free executive communication.</li>
+              <li><i class="fa-solid fa-check"></i> Relentless focus on ROI & Customer Impact.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <span>Open to global product leadership roles across Europe & North America.</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:meghavermapm@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/megha-verma22/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <a id="resume-file-link" href="Megha-Verma-OC-RESUME.docx" download="Megha-Verma-OC-RESUME.docx" style="display:none;"></a>
+
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="modal-title"></div>
+          <div class="modal-chip" id="modal-role"></div>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-block">
+          <h4>Challenge</h4>
+          <div id="modal-challenge"></div>
+        </div>
+        <div class="modal-block">
+          <h4>Action</h4>
+          <div id="modal-action"></div>
+        </div>
+        <div class="modal-block">
+          <h4>Result</h4>
+          <div id="modal-result"></div>
+        </div>
+      </div>
+      <div class="modal-meta" id="modal-tags"></div>
+    </div>
+  </div>
+
+  <script>
+    // Typing animation
+    const titles = [
+      "Strategic Product Leader",
+      "AI & Automation Innovator",
+      "Customer Journey Orchestrator",
+      "Enterprise Problem Solver"
+    ];
+    const typingElement = document.getElementById("typing-text");
+    let titleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      const current = titles[titleIndex];
+      if (!deleting) {
+        typingElement.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          setTimeout(() => {
+            deleting = true;
+          }, 1200);
+        }
+      } else {
+        typingElement.textContent = current.slice(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          deleting = false;
+          titleIndex = (titleIndex + 1) % titles.length;
+        }
+      }
+      const delay = deleting ? 60 : 80;
+      setTimeout(typeLoop, delay);
+    }
+    typeLoop();
+
+    // Download resume button
+    const downloadBtn = document.getElementById("download-resume");
+    const resumeLink = document.getElementById("resume-file-link");
+    if (downloadBtn && resumeLink) {
+      downloadBtn.addEventListener("click", () => {
+        resumeLink.click();
+      });
+    }
+
+    // Timeline expand on hover/click
+    document.querySelectorAll(".timeline-card[data-expandable='true']").forEach(card => {
+      const toggleExpand = () => {
+        card.classList.toggle("expanded");
+      };
+      card.addEventListener("click", toggleExpand);
+      card.addEventListener("mouseenter", () => card.classList.add("expanded"));
+      card.addEventListener("mouseleave", () => card.classList.remove("expanded"));
+    });
+
+    // Project Vault modal data
+    const projectData = {
+      "order-remediation": {
+        title: "End-to-End Automated Order Remediation & Provisioning",
+        role: "Business Architect · Product Owner — Operations & Supply Chain",
+        challenge:
+          "Fragmented, manual remediation of stuck orders across email, spreadsheets, and multiple legacy systems drove high operational overhead, data entry errors, and delayed revenue recognition.",
+        action:
+          "Designed an intelligent RPA solution that aggregated service data, integrated with ERM and CRM platforms, validated completeness through decision gateways, and automatically triggered device rebuild and provisioning workflows.",
+        result:
+          "Eliminated manual data entry, ensured near-100% data integrity, and significantly reduced the order-to-activation cycle time while creating a digital audit trail for compliance.",
+        tags: ["Automation Anywhere", "Telecom Operations", "Order-to-Activation", "Data Integrity"]
+      },
+      "attended-rpa": {
+        title: "Real-Time Interactive Service Validation (Attended RPA)",
+        role: "Senior Product Owner — Customer Experience & Compliance",
+        challenge:
+          "Agent reliance on manual initiation of disclosures and customer review links, leading to inconsistent service transparency, missed value-added opportunities, and complex live call handling.",
+        action:
+          "Embedded an attended bot as an on-screen co-pilot that ran eligibility checks, surfaced automated utilization reminders, and dispatched a structured digital review link summarizing account changes in real time.",
+        result:
+          "Improved disclosure compliance to near-100% of eligible customers, boosted secondary service utilization, and reduced buyer’s remorse and repeat support calls through transparent digital journeys.",
+        tags: ["Attended RPA", "Service Disclosure", "Digital Review Link", "Live Agent Co-pilot"]
+      },
+      "esim-optimization": {
+        title: "eSIM Digital Activation Optimization",
+        role: "Senior Product Owner — Lean Six Sigma AHT Reduction",
+        challenge:
+          "Complex, device-specific activation steps across disparate systems increased average handle time, introduced training variability, and created friction during live eSIM activation requests.",
+        action:
+          "Applied DMAIC to map the end-to-end journey, baseline AHT, and analyze root causes, then implemented a streamlined activation interface and automated digital self-service instructions.",
+        result:
+          "Targeted a 50%+ reduction in AHT, improved first-call resolution, and established a standardized activation framework that scaled across new hardware launches.",
+        tags: ["Lean Six Sigma", "DMAIC", "eSIM Activation", "Operational Efficiency"]
+      },
+      "logistics-rpa": {
+        title: "Automated Logistics Reconciliation & Customer Communication",
+        role: "Product Manager — Supply Chain & CX Automation",
+        challenge:
+          "Manual daily reconciliation of delayed shipments across ERP, dashboards, and messaging channels created high labor costs, data errors, and slow customer notifications.",
+        action:
+          "Deployed an RPA-led digital worker to reconcile ERP and logistics dashboards, orchestrate planner updates, and push reconciled ship-commit data to messaging APIs for personalized customer emails.",
+        result:
+          "Automated roughly 80% of the reconciliation effort, delivered an estimated 28,000+ in annual cost savings, and significantly improved the timeliness and accuracy of delay communications.",
+        tags: ["SAP ERP", "RPA", "Customer Communication", "Cost Savings"]
+      },
+      "jaas": {
+        title: "Journey as a Service (JaaS) Platform",
+        role: "Senior Product Owner — Journey Orchestration",
+        challenge:
+          "Customer journeys were fragmented across channels, lacking a unified, real-time view of milestones and proactive interventions for broken processes.",
+        action:
+          "Led a microservices-based platform that stitched transactional data into a curated timeline, introduced intelligent CTAs (active, passive, contextual), and standardized 38+ common journeys into a universal template.",
+        result:
+          "Scaled to over 514,000 digital interactions and 91,000 assisted interactions in a single quarter, reduced agent research time, and integrated automation to systematically retry failed milestones.",
+        tags: ["Journey Mapping", "Microservices", "CTA Engine", "Omni-channel CX"]
+      },
+      "service-integrity": {
+        title: "Enterprise Service Integrity — Intelligent Follow-Up Platform",
+        role: "Senior Product Manager Lead — Service Done Right",
+        challenge:
+          "Post-interaction issues were managed through manual, inconsistent follow-up processes, leading to secondary contacts, churn risk, and lack of end-to-end service integrity.",
+        action:
+          "Owned the roadmap and logic framework for 30 follow-up categories, introducing trigger-based cases, automated digital treatments, and a standardized master reference for 20 global service types.",
+        result:
+          "Improved first-contact resolution, reduced secondary inbound calls, and enabled self-healing resolutions that bypass agents entirely, contributing to multimillion-dollar OPEX savings.",
+        tags: ["Proactive Service", "Case Management", "Digital Treatments", "Global Standardization"]
+      }
+    };
+
+    const modalBackdrop = document.getElementById("modal-backdrop");
+    const modalTitle = document.getElementById("modal-title");
+    const modalRole = document.getElementById("modal-role");
+    const modalChallenge = document.getElementById("modal-challenge");
+    const modalAction = document.getElementById("modal-action");
+    const modalResult = document.getElementById("modal-result");
+    const modalTags = document.getElementById("modal-tags");
+    const modalClose = document.getElementById("modal-close");
+
+    function openProjectModal(key) {
+      const data = projectData[key];
+      if (!data) return;
+      modalTitle.textContent = data.title;
+      modalRole.textContent = data.role;
+      modalChallenge.textContent = data.challenge;
+      modalAction.textContent = data.action;
+      modalResult.textContent = data.result;
+      modalTags.innerHTML = "";
+      data.tags.forEach(t => {
+        const span = document.createElement("span");
+        span.textContent = t;
+        modalTags.appendChild(span);
+      });
+      modalBackdrop.style.display = "flex";
+    }
+
+    document.querySelectorAll(".vault-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const key = card.getAttribute("data-project");
+        openProjectModal(key);
+      });
+    });
+
+    modalClose.addEventListener("click", () => {
+      modalBackdrop.style.display = "none";
+    });
+    modalBackdrop.addEventListener("click", e => {
+      if (e.target === modalBackdrop) {
+        modalBackdrop.style.display = "none";
+      }
+    });
+
+    // Skills animation on load
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".skill-bar-fill").forEach(bar => {
+        const w = bar.getAttribute("data-skill-width");
+        bar.style.width = w + "%";
+      });
+    });
+
+    // Testimonials
+    const testimonials = [
+      {
+        quote:
+          "Megha is not only an outstanding Senior Technical Product Manager but also a trusted business partner. I’ve had the privilege of working with her for several years, and her expertise and professionalism consistently stand out. She has a remarkable ability to translate complex technical concepts into clear, digestible information for team members, ensuring everyone stays aligned without ever speaking down to anyone. Her communication skills foster collaboration and make even the most technical discussions accessible. Any team would be fortunate to have Megha!",
+        author: "Janine Schwartz, CSM",
+        role: "Senior Portfolio Manager · Verizon",
+        link: "https://www.linkedin.com/in/janine-schwartz"
+      },
+      {
+        quote:
+          "I had the privilege of Megha working on my team in both the US and India offices for 3 years. Megha has a strong work ethic, great analytical and reasoning skills, and a passion to learn and grow. She managed a major portion of our control room functions and interacted well with operational and development members of the organization. She faced off to regulatory agencies and provided transparency to senior management about potential challenges to her deliverables. Overall, Megha would make a great addition to any organization and I would strongly recommend her.",
+        author: "Matt Richards",
+        role: "Senior Technology Executive & Product Manager",
+        link: "https://www.linkedin.com/in/mattrichardsprofile"
+      },
+      {
+        quote:
+          "Megha is an excellent resource, capable of generating smart, creative and efficient solutions to complex problems. She is capable of learning new technologies quickly, and is able to teach these new tools and knowledge to the rest of the team, lifting not only her capabilities but that of the whole team. Megha has a deep understanding of how to deliver software solutions utilized worldwide and around the clock. She also creates excellent relationships across teams and with clients. Additionally, she has always proven to be reliable, responsible and capable of working in high energy, high stress environments, delivering high quality work every single time.",
+        author: "Amilcar Gonzalez",
+        role: "Senior Technical Program Manager",
+        link: "https://www.linkedin.com/in/amilcar-gonzalva"
+      },
+      {
+        quote:
+          "Megha is an excellent manager to work with. She is able to evaluate business needs while managing expectations in the world of development where outcomes can be uncertain. Throughout discovery to automation launches, I've seen her lead teams across various product lines and articulate expectations with clarity to all involved. Among other strengths this was the most admirable to me and our fellow teams.",
+        author: "Levi Bundi",
+        role: "Senior RPA Business System Analyst",
+        link: "https://www.linkedin.com/in/levi-bundi-1b405370"
+      },
+      {
+        quote:
+          "Megha is a multi talented professional. Rarely we come across a person who is specialized in multiple methodologies, tools, and concepts. She is extremely positive, enthusiastic, dedicated, focused and goal oriented. I had the opportunity to train and mentor her during NIQC International's Lean Six Sigma training program and it was an amazing experience. She was easily able to understand each and every tool and concept, relate it to any business, see opportunity, analyse and get solutions. Her understanding of data and statistics is extremely good. She did support a few NIQC clients and showed significant improvement in terms of revenue with LSS and RPA. I would be glad to recommend Megha as one of the best professionals for any LSS and automation solutions.",
+        author: "Rajesh Kumar",
+        role: "LSS Master Black Belt · Consultant",
+        link: "https://www.linkedin.com/in/rajesh-kumar-8294b592"
+      }
+    ];
+
+    const quoteEl = document.getElementById("testimonial-quote");
+    const authorEl = document.getElementById("testimonial-author");
+    const roleEl = document.getElementById("testimonial-role");
+    const avatarEl = document.getElementById("testimonial-avatar");
+    const linkEl = document.getElementById("testimonial-link");
+    const dotsEl = document.getElementById("testimonial-dots");
+    const prevBtn = document.getElementById("testimonial-prev");
+    const nextBtn = document.getElementById("testimonial-next");
+    let testimonialIndex = 0;
+    let testimonialTimer;
+
+    function renderDots() {
+      dotsEl.innerHTML = "";
+      testimonials.forEach((_, idx) => {
+        const dot = document.createElement("div");
+        dot.className = "testimonial-dot" + (idx === testimonialIndex ? " active" : "");
+        dot.addEventListener("click", () => {
+            testimonialIndex = idx;
+            renderTestimonial();
+            restartTestimonialTimer();
+        });
+        dotsEl.appendChild(dot);
+      });
+    }
+
+    function renderTestimonial() {
+      const t = testimonials[testimonialIndex];
+      const firstMeghaIndex = t.quote.indexOf("Megha");
+      if (firstMeghaIndex !== -1) {
+        const before = t.quote.slice(0, firstMeghaIndex);
+        const after = t.quote.slice(firstMeghaIndex + "Megha".length);
+        quoteEl.innerHTML = `${before}<span class="highlight">Megha</span>${after}`;
+      } else {
+        quoteEl.textContent = t.quote;
+      }
+      authorEl.textContent = t.author;
+      roleEl.textContent = t.role;
+      avatarEl.textContent = t.author.split(' ').map(n => n[0]).join('');
+      linkEl.href = t.link;
+      renderDots();
+    }
+
+    function nextTestimonial() {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      renderTestimonial();
+    }
+
+    function prevTestimonial() {
+      testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+      renderTestimonial();
+    }
+
+    nextBtn.addEventListener("click", () => {
+      nextTestimonial();
+      restartTestimonialTimer();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      prevTestimonial();
+      restartTestimonialTimer();
+    });
+
+    function startTestimonialTimer() {
+      testimonialTimer = setInterval(nextTestimonial, 10000);
+    }
+
+    function restartTestimonialTimer() {
+      clearInterval(testimonialTimer);
+      startTestimonialTimer();
+    }
+
+    renderTestimonial();
+    startTestimonialTimer();
+  </script>
+</body>
+</html>
