@@ -129,81 +129,125 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* IMPACT TILES */
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-    .impact-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 24px;
-      border-radius: 20px;
-      transition: var(--transition);
-    }
+    .impact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .impact-card { background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 20px; transition: var(--transition); }
     .impact-value { font-size: 2.2rem; font-weight: 800; color: var(--accent-gold); display: block; }
     .impact-label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
-    /* TIMELINE */
-    .timeline { position: relative; padding: 40px 0; }
-    .timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--border); }
-    .timeline-item { position: relative; padding-left: 60px; margin-bottom: 50px; }
-    .timeline-dot { position: absolute; left: 11px; top: 5px; width: 20px; height: 20px; background: var(--bg); border: 3px solid var(--accent-blue); border-radius: 50%; z-index: 2; }
-    .timeline-content h3 { font-size: 1.2rem; color: var(--accent-blue); }
-    .timeline-date { font-size: 0.8rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase; margin-bottom: 8px; display: block;}
-    .timeline-body { font-size: 0.95rem; color: var(--text-muted); }
-
-    /* TESTIMONIALS SLIDER */
-    .testimonials-section {
-      background: var(--surface);
-      padding: 80px 40px;
-      border-radius: 30px;
-      margin: 80px 0;
-      text-align: center;
-      position: relative;
-      min-height: 450px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .testimonial-quote {
-      font-size: 1.15rem;
-      font-style: italic;
-      color: var(--text-main);
-      max-width: 850px;
-      margin: 0 auto 30px;
-      line-height: 1.7;
-      transition: opacity 0.4s ease;
-    }
-    .testimonial-author {
-      font-weight: 700;
-      color: var(--accent-blue);
-      display: block;
-      font-size: 1.1rem;
-    }
-    .testimonial-role {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 5px auto 0;
-    }
-
+    /* SECTION BASICS */
     .section-title { font-size: 1.8rem; margin: 80px 0 40px; display: flex; align-items: center; gap: 15px; }
     .section-title::after { content: ""; height: 1px; background: var(--border); flex-grow: 1; }
 
+    /* TIMELINE */
+    .timeline { position: relative; padding: 20px 0 40px; }
+    .timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+    .timeline-item { position: relative; padding-left: 60px; margin-bottom: 50px; }
+    .timeline-dot { position: absolute; left: 11px; top: 5px; width: 20px; height: 20px; background: var(--bg); border: 3px solid var(--accent-blue); border-radius: 50%; z-index: 2; }
+    .timeline-dot.highlight-dot { border-color: var(--accent-gold); }
+    .timeline-content h3 { font-size: 1.25rem; color: var(--accent-blue); margin-bottom: 4px; }
+    .timeline-role { font-size: 1rem; color: var(--text-main); font-weight: 600; margin-bottom: 4px; display: block; }
+    .timeline-date { font-size: 0.8rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase; margin-bottom: 12px; display: block;}
+    .timeline-body { font-size: 0.95rem; color: var(--text-muted); max-width: 800px; }
+
+    /* VAULT */
     .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
-    .project-card { background: var(--card); border: 1px solid var(--border); padding: 35px; border-radius: 24px; transition: var(--transition); }
+    .project-card { 
+      background: var(--card); border: 1px solid var(--border); padding: 35px; border-radius: 24px; transition: var(--transition); cursor: pointer; position: relative; overflow: hidden;
+    }
     .project-card:hover { transform: translateY(-10px); border-color: var(--accent-gold); }
+
+    /* CAROUSEL RECOMMENDATIONS */
+    .recommendations-section { margin: 100px 0; }
+    .carousel-container {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 60px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .carousel-track { display: flex; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+    .carousel-slide { min-width: 100%; opacity: 0; transition: opacity 0.4s ease; padding: 0 20px; }
+    .carousel-slide.active { opacity: 1; }
+
+    .theme-label {
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .quote-text {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: 500;
+      margin-bottom: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+    }
+    .author-info strong { display: block; color: var(--accent-gold); font-size: 1.1rem; }
+    .author-info span { color: var(--text-muted); font-size: 0.85rem; }
+
+    .carousel-nav {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      display: flex;
+      gap: 15px;
+      z-index: 10;
+    }
+    .nav-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .nav-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 55px;
+      left: 60px;
+      display: flex;
+      gap: 8px;
+    }
+    .dot { width: 8px; height: 8px; background: var(--border); border-radius: 50%; cursor: pointer; transition: var(--transition); }
+    .dot.active { background: var(--accent-gold); width: 24px; border-radius: 4px; }
+
+    /* MODAL */
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 4, 10, 0.95); backdrop-filter: blur(10px); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .modal-content { background: var(--surface); border: 1px solid var(--border); border-radius: 30px; width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto; padding: 50px; position: relative; }
+    .modal-close { position: sticky; top: -20px; float: right; background: var(--card); border: 1px solid var(--border); color: var(--text-main); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; }
+    .modal-header h3 { font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px; }
+    .modal-section { margin-bottom: 30px; }
+    .modal-section h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-blue); margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+    .modal-list { list-style: none; }
+    .modal-list li { margin-bottom: 10px; display: flex; gap: 15px; align-items: flex-start; }
+    .modal-list li::before { content: "•"; color: var(--accent-gold); font-weight: 800; }
 
     footer { padding: 60px 0; text-align: center; border-top: 1px solid var(--border); margin-top: 60px; }
 
-    @media (max-width: 968px) {
+    @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; }
       .hero-title { font-size: 2.5rem; }
+      .carousel-container { padding: 40px 20px 120px; min-height: 550px; }
+      .quote-text { font-size: 1.15rem; }
+      .carousel-nav { right: 50%; transform: translateX(50%); bottom: 20px; }
+      .carousel-dots { left: 50%; transform: translateX(-50%); bottom: 90px; }
       nav { display: none; }
-      .testimonial-quote { font-size: 1rem; }
-      .testimonials-section { padding: 40px 20px; min-height: 550px; }
     }
   </style>
 </head>
@@ -211,7 +255,7 @@
 
   <a href="https://www.linkedin.com/in/megha-verma-productleader/" target="_blank" class="constant-linkedin">
     <i class="fa-brands fa-linkedin"></i>
-    <span>LinkedIn Recommendations</span>
+    <span>LinkedIn</span>
   </a>
 
   <div class="container">
@@ -225,9 +269,8 @@
       </div>
       <nav>
         <a href="#throughline">Throughline</a>
-        <a href="#impact">Impact</a>
         <a href="#vault">Vault</a>
-        <a href="#testimonials">Recommendations</a>
+        <a href="#recommendations">Endorsements</a>
       </nav>
     </header>
 
@@ -235,9 +278,7 @@
       <div class="hero-content">
         <span class="hero-badge">0-1 PRODUCT INNOVATOR</span>
         <h2 class="hero-title">Engineering Efficiency Through Task Orchestration.</h2>
-        <p class="hero-subtitle">
-          Transforming fragmented legacy operations into scalable digital ecosystems. Currently building the future of middle-office automation at <strong>NiCE</strong>.
-        </p>
+        <p class="hero-subtitle">Transforming fragmented legacy operations into scalable digital ecosystems. Currently building the future of middle-office automation at <strong>NiCE</strong>.</p>
       </div>
 
       <div class="impact-grid" id="impact">
@@ -260,22 +301,25 @@
       </div>
     </section>
 
+    <!-- CAREER THROUGHLINE -->
     <h2 class="section-title" id="throughline">Career Throughline</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-dot" style="background: var(--accent-gold);"></div>
+        <div class="timeline-dot highlight-dot"></div>
         <span class="timeline-date">Jan 2026 - Present</span>
         <div class="timeline-content">
-          <h3>NiCE · Senior Specialist Product Manager</h3>
-          <p class="timeline-body">Leading the 0-1 inception of a Task Orchestration persona. Bridging the intelligence gap between Front Office and Back Office to harmonize end-to-end knowledge work.</p>
+          <span class="timeline-role">Senior Specialist Product Manager</span>
+          <h3>NiCE</h3>
+          <p class="timeline-body">Leading the 0-1 inception of a Task Orchestration persona. Defining product vision for CC Quality Management, bridging the gap between Front and Back Office to harmonize end-to-end knowledge work.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <span class="timeline-date">2021 - 2024</span>
+        <span class="timeline-date">2021 - Dec 2025</span>
         <div class="timeline-content">
-          <h3>Verizon · Senior Product Manager</h3>
+          <span class="timeline-role">Senior Product Manager</span>
+          <h3>Verizon</h3>
           <p class="timeline-body">Architected "Journey-as-a-Service" (JaaS). Delivered $25.1M in annual savings through AI-driven call deflection and automated order remediation across complex supply chain environments.</p>
         </div>
       </div>
@@ -284,8 +328,9 @@
         <div class="timeline-dot" style="border-color: var(--accent-emerald);"></div>
         <span class="timeline-date">2022 - 2024</span>
         <div class="timeline-content">
+          <span class="timeline-role">MBA · Strategic Innovation & Business Analytics</span>
           <h3>University of Illinois Urbana-Champaign</h3>
-          <p class="timeline-body"><strong>MBA · Strategic Innovation & Business Analytics.</strong> Focused on high-growth strategy, data-driven decision making, and leading digital transformation at scale.</p>
+          <p class="timeline-body">Focused on high-growth strategy, data-driven decision making, and leading digital transformation at scale.</p>
         </div>
       </div>
 
@@ -293,148 +338,184 @@
         <div class="timeline-dot"></div>
         <span class="timeline-date">2008 - 2021</span>
         <div class="timeline-content">
-          <h3>Infosys · Lead Technology Analyst</h3>
-          <p class="timeline-body">13-year foundation in large-scale digital transformation. Modernized 10+ business units and authored 25+ process standards for global RPA/AI governance.</p>
+          <span class="timeline-role">Lead Technology Analyst, AI & Automation</span>
+          <h3>Infosys</h3>
+          <p class="timeline-body">Modernized 10+ business units by replacing legacy processes with structured RPA/AI governance. Authored 25+ process standards and lifted operational efficiency by 30% through Agile transformation.</p>
         </div>
       </div>
     </div>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials-section" id="testimonials">
-      <div id="testimonial-container">
-        <p class="testimonial-quote" id="quote">Loading recommendation...</p>
-        <span class="testimonial-author" id="author"></span>
-        <span class="testimonial-role" id="role"></span>
-      </div>
-      <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px;">
-        <button onclick="prevTestimonial()" style="background:none; border:1px solid var(--border); color:white; width:44px; height:44px; cursor:pointer; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:var(--transition);"><i class="fas fa-chevron-left"></i></button>
-        <div id="testimonial-dots" style="display: flex; align-items: center; gap: 10px;"></div>
-        <button onclick="nextTestimonial()" style="background:none; border:1px solid var(--border); color:white; width:44px; height:44px; cursor:pointer; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:var(--transition);"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </section>
-
+    <!-- PRODUCT VAULT -->
     <h2 class="section-title" id="vault">Product Vault</h2>
     <div class="vault-grid">
-      <div class="project-card">
-        <h3 style="color: var(--accent-gold);">NiCE Task Orchestrator</h3>
-        <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">A 0-1 initiative to eliminate manual "swivel-chair" tasks by creating a unified orchestration layer.</p>
+      <div class="project-card" onclick="openModal('nice')">
+        <h3 style="color: var(--accent-gold);">NiCE: Task Orchestrator</h3>
+        <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">A 0-1 initiative to eliminate "swivel-chair" tasks through unified middle-office orchestration.</p>
         <span class="hero-badge">AI PERSONA</span>
       </div>
-      <div class="project-card">
-        <h3 style="color: var(--accent-blue);">Verizon JaaS</h3>
-        <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">A microservices-led automation platform that consolidated 38 fragmented customer journeys.</p>
+      <div class="project-card" onclick="openModal('verizon')">
+        <h3 style="color: var(--accent-blue);">Verizon: JaaS Transformation</h3>
+        <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">Bridging data gaps between legacy resource management and billing systems via Intelligent Automation.</p>
         <span class="hero-badge">RPA & MICROSERVICES</span>
       </div>
-      <div class="project-card">
-        <h3 style="color: var(--accent-emerald);">RPA Governance</h3>
-        <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">Standardized automation delivery across 10 business units at Infosys, lifting efficiency by 30%.</p>
-        <span class="hero-badge">STRATEGY</span>
+      <div class="project-card" onclick="openModal('infosys')">
+        <h3 style="color: var(--accent-emerald);">Infosys: Global RPA Governance</h3>
+        <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-muted);">Standardized automation delivery across 10 business units, modernizing legacy architectures.</p>
+        <span class="hero-badge">SCALABLE GOVERNANCE</span>
       </div>
     </div>
+
+    <!-- RECOMMENDATIONS CAROUSEL -->
+    <section class="recommendations-section" id="recommendations">
+      <h2 class="section-title">Endorsements</h2>
+      
+      <div class="carousel-container">
+        <div class="carousel-track" id="carousel-track">
+          <!-- Slides injected via JS -->
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+        <div class="carousel-nav">
+          <button class="nav-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+          <button class="nav-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Megha Verma · Executive Portfolio</p>
     </footer>
   </div>
 
+  <!-- MODAL STRUCTURE -->
+  <div id="project-modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event)"><i class="fas fa-times"></i></button>
+      <div id="modal-data"></div>
+    </div>
+  </div>
+
   <script>
     const testimonials = [
       {
-        quote: "Megha is not only an outstanding Senior Technical Product Manager but also a trusted business partner... She has a remarkable ability to translate complex technical concepts into clear, digestible information for team members, ensuring everyone stays aligned without ever speaking down to anyone.",
-        author: "Janine Schwartz, CSM",
-        role: "Senior Program & Portfolio Manager • Enterprise Governance • Verizon Partner"
-      },
-      {
-        quote: "Megha is an Excellent Manager to work with. She is able to evaluate business needs while managing expectations in the world of development where outcomes can be uncertain... Through out Discovery to Automations Launches I've seen her lead teams across various product lines and articulate expectations with clarity to all involved.",
-        author: "Levi Bundi",
-        role: "Senior RPA Business System Analyst • UiPath Expert"
-      },
-      {
-        quote: "I can attest that she is an outstanding leader, a valued team member and key team player... Megha excels as a servant-leader, collaborating, guiding, and motivating other members of the team. She is a natural leader and problem solver.",
+        theme: "Leadership & Strategic Vision",
+        quote: "Megha excels as a servant-leader... solving urgent issues while anticipating future concerns! I'm happy to recommend Megha as an exceptional leader.",
         author: "Alberto Antunano",
-        role: "VP Program Management • MBA • PMP • SSM"
+        role: "VP Program Management"
       },
       {
-        quote: "I had the privilege of Megha working on my team in both the US and India offices for 3 years. Megha has a strong work ethic, great analytical and reasoning skills, and a passion to learn and grow... Megha would make a great addition to any organization and I would strongly recommend her.",
-        author: "Matt Richards",
-        role: "Senior Technology Executive • Product Manager • Former Manager"
+        theme: "Leadership & Strategic Vision",
+        quote: "A trusted business partner... [with] a remarkable ability to translate complex technical concepts into clear, digestible information for team members.",
+        author: "Janine Schwartz",
+        role: "Sr. Program & Portfolio Manager"
       },
       {
-        quote: "Megha is an excellent resource, capable of generating smart, creative and efficient solutions to complex problems... She also creates excellent relationships across teams and with clients. Additionally, she has always proven to be reliable, responsible and capable of working on high energy / high stress environments.",
+        theme: "Technical Delivery & Execution",
+        quote: "Able to evaluate business needs while managing expectations in the world of development where outcomes can be uncertain... [She can] articulate expectations with clarity.",
+        author: "Levi Bundi",
+        role: "Sr. RPA Business System Analyst"
+      },
+      {
+        theme: "Technical Delivery & Execution",
+        quote: "Capable of generating smart, creative and efficient solutions to complex problems... proven to be reliable, responsible and capable of working on high energy / high stress environments.",
         author: "Amilcar Gonzalez",
-        role: "Senior Technical Program Manager • Project Management • Risk & Compliance"
+        role: "Sr. Technical Program Manager"
+      },
+      {
+        theme: "Process Excellence & Innovation",
+        quote: "Rarely we come across a person who is specialized in multiple methodologies... Shown significant improvement in terms of revenue with LSS and RPA.",
+        author: "Rajesh K",
+        role: "LSS Master Black Belt"
+      },
+      {
+        theme: "Process Excellence & Innovation",
+        quote: "A very well rounded Quality professional with exposure over various methodologies... Her knowledge in RPA tools and AI/ML solutions are highly commendable.",
+        author: "Chethan Swamy",
+        role: "Quality Assurance Leader"
       }
     ];
 
-    let currentIdx = 0;
-    const quoteEl = document.getElementById('quote');
-    const authorEl = document.getElementById('author');
-    const roleEl = document.getElementById('role');
-    const dotsContainer = document.getElementById('testimonial-dots');
+    let currentSlide = 0;
+    const track = document.getElementById('carousel-track');
+    const dotsContainer = document.getElementById('carousel-dots');
 
-    function initDots() {
-      dotsContainer.innerHTML = '';
-      testimonials.forEach((_, i) => {
+    function initCarousel() {
+      testimonials.forEach((t, i) => {
+        const slide = document.createElement('div');
+        slide.className = `carousel-slide ${i === 0 ? 'active' : ''}`;
+        slide.innerHTML = `
+          <span class="theme-label">${t.theme}</span>
+          <p class="quote-text">"${t.quote}"</p>
+          <div class="author-info">
+            <strong>${t.author}</strong>
+            <span>${t.role}</span>
+          </div>
+        `;
+        track.appendChild(slide);
+
         const dot = document.createElement('div');
-        dot.style.width = '8px';
-        dot.style.height = '8px';
-        dot.style.borderRadius = '50%';
-        dot.style.background = i === 0 ? 'var(--accent-blue)' : 'var(--border)';
-        dot.style.transition = 'all 0.3s ease';
+        dot.className = `dot ${i === 0 ? 'active' : ''}`;
+        dot.onclick = () => goToSlide(i);
         dotsContainer.appendChild(dot);
       });
     }
 
-    function updateTestimonial() {
-      const t = testimonials[currentIdx];
-      quoteEl.style.opacity = 0;
-      setTimeout(() => {
-        quoteEl.innerText = `"${t.quote}"`;
-        authorEl.innerText = t.author;
-        roleEl.innerText = t.role;
-        quoteEl.style.opacity = 1;
-        
-        const dots = dotsContainer.querySelectorAll('div');
-        dots.forEach((dot, i) => {
-          dot.style.background = i === currentIdx ? 'var(--accent-blue)' : 'var(--border)';
-          dot.style.transform = i === currentIdx ? 'scale(1.2)' : 'scale(1)';
-        });
-      }, 300);
+    function updateCarousel() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.dot');
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
     }
 
-    function nextTestimonial() {
-      currentIdx = (currentIdx + 1) % testimonials.length;
-      updateTestimonial();
-    }
+    function nextSlide() { currentSlide = (currentSlide + 1) % testimonials.length; updateCarousel(); }
+    function prevSlide() { currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length; updateCarousel(); }
+    function goToSlide(index) { currentSlide = index; updateCarousel(); }
 
-    function prevTestimonial() {
-      currentIdx = (currentIdx - 1 + testimonials.length) % testimonials.length;
-      updateTestimonial();
-    }
-
-    setInterval(nextTestimonial, 12000);
-
-    window.onload = () => {
-      initDots();
-      updateTestimonial();
+    // Modal Case Study Data
+    const caseStudies = {
+      verizon: {
+        title: "Verizon: Automated Order Remediation",
+        summary: "Designed a high-impact Intelligent Automation solution to bridge gaps between legacy resource management tools and customer billing systems.",
+        problem: "Manual remediation of stuck orders was causing high operational overhead and revenue leakage.",
+        solution: ["Intelligent Data Aggregation", "Cross-System Integration", "Automated Provisioning"],
+        impact: ["$25.1M annual savings", "133,000+ manual hours reclaimed"]
+      },
+      nice: {
+        title: "NiCE: 0-1 Task Orchestration",
+        summary: "Leading the inception of a middle-office automation persona designed to synchronize knowledge work across siloed departments.",
+        problem: "CC Quality Management operations suffer from high 'swivel-chair' latency.",
+        solution: ["Task Orchestration Persona", "Strategic Roadmap", "Executive Influence"],
+        impact: ["Harmonized front-to-back workflows", "Unified fragmented tools"]
+      },
+      infosys: {
+        title: "Infosys: Global RPA Governance",
+        summary: "Modernized the ways of working for over 10 business units via a structured RPA/AI governance framework.",
+        problem: "Inconsistent automation standards led to high maintenance and slow deployment.",
+        solution: ["Process Engineering", "Agile Transformation", "Governance Framework"],
+        impact: ["30% efficiency lift", "Standardized delivery across 10 BUs"]
+      }
     };
 
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const timelineObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateX(0)';
-        }
-      });
-    }, {threshold: 0.1});
+    function openModal(id) {
+      const data = caseStudies[id];
+      const modalData = document.getElementById('modal-data');
+      modalData.innerHTML = `
+        <div class="modal-header"><h3>${data.title}</h3></div>
+        <div class="modal-section"><h4>Executive Summary</h4><p>${data.summary}</p></div>
+        <div class="modal-section"><h4>Challenge</h4><p>${data.problem}</p></div>
+        <div class="modal-section"><h4>Solution</h4><ul class="modal-list">${data.solution.map(s => `<li>${s}</li>`).join('')}</ul></div>
+        <div class="modal-section"><h4>Impact</h4><ul class="modal-list">${data.impact.map(i => `<li style="color:var(--accent-emerald);font-weight:600;">${i}</li>`).join('')}</ul></div>
+      `;
+      document.getElementById('project-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
 
-    timelineItems.forEach(item => {
-      item.style.opacity = 0;
-      item.style.transform = 'translateX(-20px)';
-      item.style.transition = 'all 0.6s ease-out';
-      timelineObserver.observe(item);
-    });
+    function closeModal() {
+      document.getElementById('project-modal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onload = initCarousel;
   </script>
 </body>
 </html>
